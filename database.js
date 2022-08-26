@@ -4,7 +4,7 @@ let connection = mysql.createConnection({
   host: 'localhost',
   user: 'root', 
   password: 'Brian11!',
-  database: 'meme_generator'
+  database: 'meme_generator_app'
 });
 
 connection.connect((err) => {
@@ -19,7 +19,7 @@ connection.connect((err) => {
 const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
-  database: 'meme_generator',
+  database: 'meme_generator_app',
   waitForConnections: true,
   connectionLimit: 4,
   queueLimit: 0

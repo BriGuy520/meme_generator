@@ -1,9 +1,9 @@
 let createController = require('../controllers/createController');
+const multer = require('multer');
+const upload = multer({dest: 'uploads/'});
 
 module.exports = (app) => {
 
-  app.get('/form', createController.crudForm);
-
-  app.post('/upload', createController.createData);
+  app.post('/upload', upload.single('image'), createController.createData);
 
 }
